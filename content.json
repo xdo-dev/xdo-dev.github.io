@@ -1,0 +1,278 @@
+{
+  "site": {
+    "domain": "xdo.dev",
+    "company": "XDO Company",
+    "brand": "xdo",
+    "github": "https://github.com/xdo-dev",
+    "email": "enquiry@xdo.dev",
+    "articles_enabled": false
+  },
+  "en": {
+    "lang_code": "en",
+    "lang_label": "EN",
+    "other_lang_code": "zh-Hant",
+    "other_lang_label": "繁體中文",
+    "html_lang": "en",
+    "title": "xdo — Cybersecurity services for mobile and web",
+    "description": "xdo provides penetration testing and code auditing for mobile and web applications. Developer and bug-bounty roots.",
+    "nav": [
+      {
+        "id": "services",
+        "label": "Services"
+      },
+      {
+        "id": "approach",
+        "label": "Approach"
+      },
+      {
+        "id": "about",
+        "label": "About"
+      },
+      {
+        "id": "articles",
+        "label": "Articles",
+        "href_kind": "articles"
+      },
+      {
+        "id": "contact",
+        "label": "Contact"
+      }
+    ],
+    "theme_toggle": "Switch to dark mode",
+    "menu": "Menu",
+    "hero": {
+      "eyebrow": "Cybersecurity",
+      "title_lines": [
+        "Built to ship.",
+        "Tested to withstand."
+      ],
+      "lead": "xdo is a cybersecurity team with developer and bug-bounty roots. We pentest and audit mobile and web applications for enterprises across Asia Pacific — and we document what we find, clearly.",
+      "cta_primary": "Contact Us",
+      "cta_secondary": "Read our articles"
+    },
+    "services": {
+      "label": "01 — Services",
+      "title": "What we do",
+      "intro": "Two focused services, mobile and web. No checklists-for-hire — every engagement is scoped and tested by people who build software and break software.",
+      "items": [
+        {
+          "name": "Penetration Testing",
+          "tag": "Mobile & Web",
+          "desc": "Manual-first, attacker-perspective testing of your mobile and web applications. We chain findings the way real adversaries do, then rank every issue by business risk.",
+          "who": "For enterprises that need to know how their applications really hold up.",
+          "benefit_title": "What you get",
+          "benefit": "A findings report ranked by risk, with remediation guidance your developers can act on."
+        },
+        {
+          "name": "Code Audit",
+          "tag": "Mobile & Web",
+          "desc": "Source-level review of your mobile and web applications, from a developer and bug-bounty perspective. We read the code, not just the output.",
+          "who": "For enterprises that want issues found before deployment, not after.",
+          "benefit_title": "What you get",
+          "benefit": "Assessment documentation covering the agreed scope, the work performed, and every finding."
+        }
+      ],
+      "note_title": "About assessment documentation",
+      "note": "Assessment documentation describes the agreed scope, work performed and findings. Any assessment certificate or completion statement must identify its scope, date and limitations. It does not guarantee that an application is free of vulnerabilities."
+    },
+    "approach": {
+      "label": "02 — Approach",
+      "title": "How an engagement runs",
+      "steps": [
+        {
+          "step": "01",
+          "name": "Scope",
+          "desc": "We agree on targets, rules of engagement, and what “done” means — before any testing starts."
+        },
+        {
+          "step": "02",
+          "name": "Test",
+          "desc": "Manual-first testing by people who write code and hunt bugs for a living."
+        },
+        {
+          "step": "03",
+          "name": "Report",
+          "desc": "Findings ranked by risk, written for both engineers and decision-makers."
+        },
+        {
+          "step": "04",
+          "name": "Verify",
+          "desc": "We retest your fixes and issue the assessment documentation for the agreed scope."
+        }
+      ]
+    },
+    "about": {
+      "label": "03 — About",
+      "title": "Developers first. Testers by trade.",
+      "body": "xdo came up through development and bug bounty programs, not checklists. That background shapes how we test: we read your code, understand your architecture, and attack it the way a skilled adversary would.",
+      "credentials_title": "Team credentials",
+      "credentials": [
+        "OSCP",
+        "OSCE3",
+        "RHCE",
+        "CKS",
+        "Mobile Hacking Lab - Android Exploit Developer"
+      ],
+      "region_title": "Where we work",
+      "region": "Serving enterprises in Hong Kong, Singapore and across Asia Pacific."
+    },
+    "contact": {
+      "label": "04 — Contact",
+      "title": "Talk to us",
+      "desc": "Email us to book a consultation or discuss an engagement.",
+      "email_label": "Email",
+      "github_label": "GitHub",
+      "office_label": "Office",
+      "office_value": "[Office address — to be provided]",
+      "cta": "Contact Us"
+    },
+    "articles_page": {
+      "label": "Articles",
+      "title": "Technical articles",
+      "intro": "Notes from our testing and development work. No fluff.",
+      "empty": "No articles published yet. Drafts live in the articles/ folder and appear here once published.",
+      "back": "Back to home",
+      "read": "Read article",
+      "published": "Published"
+    },
+    "footer": {
+      "tagline": "Built to ship. Tested to withstand.",
+      "rights": "All rights reserved.",
+      "office_placeholder": "[Office address — to be provided]"
+    }
+  },
+  "zh-Hant": {
+    "lang_code": "zh-Hant",
+    "lang_label": "繁體中文",
+    "other_lang_code": "en",
+    "other_lang_label": "EN",
+    "html_lang": "zh-Hant",
+    "title": "xdo — 流動及網頁應用程式資安服務",
+    "description": "xdo 為企業提供流動及網頁應用程式的滲透測試與程式碼審計服務。團隊具備開發及漏洞賞金背景。",
+    "nav": [
+      {
+        "id": "services",
+        "label": "服務"
+      },
+      {
+        "id": "approach",
+        "label": "流程"
+      },
+      {
+        "id": "about",
+        "label": "關於"
+      },
+      {
+        "id": "articles",
+        "label": "文章",
+        "href_kind": "articles"
+      },
+      {
+        "id": "contact",
+        "label": "聯絡"
+      }
+    ],
+    "theme_toggle": "切換至深色模式",
+    "menu": "選單",
+    "hero": {
+      "eyebrow": "資訊安全服務",
+      "title_lines": [
+        "為上線而生。",
+        "經得起考驗。"
+      ],
+      "lead": "xdo 是一支源自開發與漏洞賞金的資安團隊。我們為亞太區企業測試流動及網頁應用程式，並清楚記錄我們發現的一切。",
+      "cta_primary": "聯絡我們",
+      "cta_secondary": "閱讀技術文章"
+    },
+    "services": {
+      "label": "01 — 服務",
+      "title": "我們做什麼",
+      "intro": "兩項核心服務，涵蓋流動及網頁應用程式。我們不只跑清單——每個項目都由寫過程式也破過程式的人來規劃與測試。",
+      "items": [
+        {
+          "name": "滲透測試",
+          "tag": "流動及網頁",
+          "desc": "以攻擊者視角、以手動為主的流動及網頁應用程式測試。我們像真正的對手一樣串聯漏洞，並按業務風險排列所有發現。",
+          "who": "適合需要確切了解應用程式防禦能力的企業。",
+          "benefit_title": "您會得到",
+          "benefit": "一份按風險排序的報告，附上開發團隊可直接跟進的修復建議。"
+        },
+        {
+          "name": "程式碼審計",
+          "tag": "流動及網頁",
+          "desc": "以開發者與漏洞賞金視角，對流動及網頁應用程式進行程式碼層級的審查。我們讀的是程式碼，不只是輸出結果。",
+          "who": "適合想在部署前（而非部署後）發現問題的企業。",
+          "benefit_title": "您會得到",
+          "benefit": "涵蓋議定範圍、執行工作與所有發現的評估文件。"
+        }
+      ],
+      "note_title": "關於評估文件",
+      "note": "評估文件說明議定的範圍、執行的工作及發現的問題。任何評估證明或完成聲明均須載明其範圍、日期與限制，並不保證應用程式毫無漏洞。"
+    },
+    "approach": {
+      "label": "02 — 流程",
+      "title": "專案如何進行",
+      "steps": [
+        {
+          "step": "01",
+          "name": "界定範圍",
+          "desc": "在任何測試開始之前，先議定目標、測試規則與「完成」的定義。"
+        },
+        {
+          "step": "02",
+          "name": "測試",
+          "desc": "由寫程式也找漏洞的專家，以手動為主的方式測試。"
+        },
+        {
+          "step": "03",
+          "name": "報告",
+          "desc": "按風險排序的發現，同時照顧工程師與決策者的閱讀需求。"
+        },
+        {
+          "step": "04",
+          "name": "驗證",
+          "desc": "我們會複測您的修復，並就議定範圍出具評估文件。"
+        }
+      ]
+    },
+    "about": {
+      "label": "03 — 關於",
+      "title": "先是開發者，再做測試者。",
+      "body": "xdo 出身於開發與漏洞賞金計畫，而非照本宣科的檢核表。這個背景塑造了我們的測試方式：我們讀您的程式碼、理解您的架構，再以熟練攻擊者的角度發動測試。",
+      "credentials_title": "團隊認證",
+      "credentials": [
+        "OSCP",
+        "OSCE3",
+        "RHCE",
+        "CKS",
+        "Mobile Hacking Lab - Android Exploit Developer"
+      ],
+      "region_title": "服務地區",
+      "region": "服務香港、新加坡及亞太區企業。"
+    },
+    "contact": {
+      "label": "04 — 聯絡",
+      "title": "與我們聯絡",
+      "desc": "電郵我們以預約諮詢或討論專案。",
+      "email_label": "電郵",
+      "github_label": "GitHub",
+      "office_label": "辦公地點",
+      "office_value": "[辦公地點 — 待提供]",
+      "cta": "聯絡我們"
+    },
+    "articles_page": {
+      "label": "文章",
+      "title": "技術文章",
+      "intro": "來自我們測試與開發工作的筆記，絕無廢話。",
+      "empty": "尚未發佈文章。草稿存放於 articles/ 資料夾，發佈後即會顯示。",
+      "back": "返回主頁",
+      "read": "閱讀文章",
+      "published": "發佈於"
+    },
+    "footer": {
+      "tagline": "為上線而生，經得起考驗。",
+      "rights": "版權所有。",
+      "office_placeholder": "[辦公地點 — 待提供]"
+    }
+  }
+}

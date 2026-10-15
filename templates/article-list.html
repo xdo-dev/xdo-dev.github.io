@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{HTML_LANG}}" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ASSETS}}/favicon-32.png">
+<link rel="apple-touch-icon" href="{{ASSETS}}/favicon-180.png">
+<link rel="alternate" hreflang="{{HTML_LANG}}" href="{{CANONICAL}}">
+<link rel="alternate" hreflang="{{OTHER_HTML_LANG}}" href="{{OTHER_CANONICAL}}">
+<link rel="stylesheet" href="{{ASSETS}}/style.css">
+<script>
+(function(){var t;try{t=localStorage.getItem("xdo-theme")}catch(e){}
+if(!t){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+document.documentElement.setAttribute("data-theme",t)})();
+</script>
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{HOME_URL}}" aria-label="xdo home">
+      <img class="logo logo-black" src="{{ASSETS}}/logo-black.png" alt="xdo" width="54" height="30">
+      <img class="logo logo-white" src="{{ASSETS}}/logo-white.png" alt="xdo" width="54" height="30">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">{{MENU}}</button>
+    <nav class="site-nav" id="siteNav">
+      <a href="{{HOME_URL}}#services">{{NAV_SERVICES}}</a>
+      <a href="{{HOME_URL}}#approach">{{NAV_APPROACH}}</a>
+      <a href="{{HOME_URL}}#about">{{NAV_ABOUT}}</a>
+      <a href="{{ARTICLES_URL}}" aria-current="page">{{NAV_ARTICLES}}</a>
+      <a href="{{HOME_URL}}#contact">{{NAV_CONTACT}}</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a class="lang-link" href="{{OTHER_PAGE_URL}}" hreflang="{{OTHER_HTML_LANG}}">{{OTHER_LANG_LABEL}}</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="{{THEME_TOGGLE}}">{{ICON_SUN}}{{ICON_MOON}}</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <p class="breadcrumb"><a href="{{HOME_URL}}">{{BACK_HOME}}</a></p>
+  <p class="section-label">{{ARTICLES_LABEL}}</p>
+  <h1 class="page-title">{{ARTICLES_TITLE}}</h1>
+  <p class="section-intro">{{ARTICLES_INTRO}}</p>
+
+{{ARTICLE_LIST}}
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img class="logo logo-black" src="{{ASSETS}}/logo-black.png" alt="xdo" width="72" height="40">
+      <img class="logo logo-white" src="{{ASSETS}}/logo-white.png" alt="xdo" width="72" height="40">
+      <p class="footer-tagline">{{FOOTER_TAGLINE}}</p>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; {{YEAR}} {{COMPANY}}. {{FOOTER_RIGHTS}}</p>
+      <p><a href="{{HOME_URL}}">{{BRAND}}.dev</a> · <a href="{{GITHUB_URL}}" rel="noopener">GitHub</a> · <a href="{{OTHER_HOME_URL}}">{{OTHER_LANG_LABEL}}</a></p>
+      <p class="placeholder">{{FOOTER_OFFICE}}</p>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ASSETS}}/main.js"></script>
+</body>
+</html>
