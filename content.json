@@ -51,7 +51,7 @@
       "cta_secondary": "Read our articles"
     },
     "services": {
-      "label": "01 — Services",
+      "label": "Services",
       "title": "What we do",
       "intro": "Two focused services, mobile and web. No checklists-for-hire — every engagement is scoped and tested by people who build software and break software.",
       "items": [
@@ -76,7 +76,7 @@
       "note": "Assessment documentation describes the agreed scope, work performed and findings. Any assessment certificate or completion statement must identify its scope, date and limitations. It does not guarantee that an application is free of vulnerabilities."
     },
     "approach": {
-      "label": "02 — Approach",
+      "label": "Approach",
       "title": "How an engagement runs",
       "steps": [
         {
@@ -102,7 +102,7 @@
       ]
     },
     "about": {
-      "label": "03 — About",
+      "label": "About",
       "title": "Developers first. Testers by trade.",
       "body": "xdo came up through development and bug bounty programs, not checklists. That background shapes how we test: we read your code, understand your architecture, and attack it the way a skilled adversary would.",
       "credentials_title": "Team credentials",
@@ -117,7 +117,7 @@
       "region": "Serving enterprises in Hong Kong, Singapore and across Asia Pacific."
     },
     "contact": {
-      "label": "04 — Contact",
+      "label": "Contact",
       "title": "Talk to us",
       "desc": "Email us to book a consultation or discuss an engagement.",
       "email_label": "Email",
@@ -185,7 +185,7 @@
       "cta_secondary": "閱讀技術文章"
     },
     "services": {
-      "label": "01 — 服務",
+      "label": "服務",
       "title": "我們做什麼",
       "intro": "兩項核心服務，涵蓋流動及網頁應用程式。我們不只跑清單——每個項目都由寫過程式也破過程式的人來規劃與測試。",
       "items": [
@@ -210,7 +210,7 @@
       "note": "評估文件說明議定的範圍、執行的工作及發現的問題。任何評估證明或完成聲明均須載明其範圍、日期與限制，並不保證應用程式毫無漏洞。"
     },
     "approach": {
-      "label": "02 — 流程",
+      "label": "流程",
       "title": "專案如何進行",
       "steps": [
         {
@@ -236,7 +236,7 @@
       ]
     },
     "about": {
-      "label": "03 — 關於",
+      "label": "關於",
       "title": "先是開發者，再做測試者。",
       "body": "xdo 出身於開發與漏洞賞金計畫，而非照本宣科的檢核表。這個背景塑造了我們的測試方式：我們讀您的程式碼、理解您的架構，再以熟練攻擊者的角度發動測試。",
       "credentials_title": "團隊認證",
@@ -251,7 +251,7 @@
       "region": "服務香港、新加坡及亞太區企業。"
     },
     "contact": {
-      "label": "04 — 聯絡",
+      "label": "聯絡",
       "title": "與我們聯絡",
       "desc": "電郵我們以預約諮詢或討論專案。",
       "email_label": "電郵",
