@@ -1,7 +1,7 @@
 {
   "site": {
     "domain": "xdo.dev",
-    "company": "XDO Company",
+    "company": "",
     "brand": "xdo",
     "github": "https://github.com/xdo-dev",
     "email": "enquiry@xdo.dev",
@@ -13,8 +13,8 @@
     "other_lang_code": "zh-Hant",
     "other_lang_label": "繁體中文",
     "html_lang": "en",
-    "title": "xdo — Cybersecurity services for mobile and web",
-    "description": "xdo provides penetration testing and code auditing for mobile and web applications. Developer and bug-bounty roots.",
+    "title": "XDO — Cybersecurity services",
+    "description": "XDO provides penetration testing and code auditing for mobile and web applications. Developer and bug-bounty roots.",
     "nav": [
       {
         "id": "services",
@@ -46,7 +46,7 @@
         "Built to ship.",
         "Tested to withstand."
       ],
-      "lead": "xdo is a cybersecurity team with developer and bug-bounty roots. We pentest and audit mobile and web applications for enterprises across Asia Pacific — and we document what we find, clearly.",
+      "lead": "XDO is a cybersecurity team with developer and bug-bounty roots. We pentest and audit mobile and web applications for enterprises — and we document what we find, clearly.",
       "cta_primary": "Contact Us",
       "cta_secondary": "Read our articles"
     },
