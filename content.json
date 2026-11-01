@@ -122,8 +122,8 @@
       "desc": "Email us to book a consultation or discuss an engagement.",
       "email_label": "Email",
       "github_label": "GitHub",
-      "office_label": "Office",
-      "office_value": "[Office address — to be provided]",
+      "office_label": "",
+      "office_value": "",
       "cta": "Contact Us"
     },
     "articles_page": {
@@ -138,7 +138,7 @@
     "footer": {
       "tagline": "Built to ship. Tested to withstand.",
       "rights": "All rights reserved.",
-      "office_placeholder": "[Office address — to be provided]"
+      "office_placeholder": ""
     }
   },
   "zh-Hant": {
