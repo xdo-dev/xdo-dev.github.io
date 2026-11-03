@@ -129,8 +129,8 @@
     "articles_page": {
       "label": "Articles",
       "title": "Technical articles",
-      "intro": "Notes from our testing and development work. No fluff.",
-      "empty": "No articles published yet. Drafts live in the articles/ folder and appear here once published.",
+      "intro": "Notes from our testing and development work.",
+      "empty": "No articles published yet.",
       "back": "Back to home",
       "read": "Read article",
       "published": "Published",
