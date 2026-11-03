@@ -2,6 +2,7 @@
 title: "範本草稿文章 — 請刪除或修改"
 description: "示範文章格式的草稿。只要移除 draft 標記，文章就會發佈到網站。"
 date: 2026-10-15
+tags: mobile, pentest
 draft: true
 ---
 

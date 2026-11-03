@@ -181,12 +181,14 @@ def parse_article(path: Path):
         if ":" in line:
             key, _, value = line.partition(":")
             meta[key.strip()] = value.strip().strip('"')
+    tags = [t.strip() for t in meta.get("tags", "").split(",") if t.strip()]
     return {
         "slug": path.stem,
         "title": meta.get("title", path.stem),
         "description": meta.get("description", ""),
         "date": meta.get("date", ""),
         "draft": meta.get("draft", "").lower() == "true",
+        "tags": tags,
         "body": render_markdown(parts[1].strip()),
     }
 
@@ -207,6 +209,20 @@ def date_sort_key(article):
         return tuple(int(x) for x in article["date"].split("-"))
     except ValueError:
         return (0, 0, 0)
+
+
+def tag_slug(tag: str) -> str:
+    """URL-safe slug for a tag. Keeps Unicode letters (e.g. Chinese)."""
+    slug = re.sub(r"\s+", "-", tag.strip().lower())
+    return re.sub(r"[^\w-]", "", slug) or "tag"
+
+
+def tag_links(tags, art_rel: str) -> str:
+    """Linked tag pills. art_rel = path from the current page to articles/."""
+    return " ".join(
+        f'<a class="tag" href="{art_rel}tag/{tag_slug(t)}/index.html">{escape(t)}</a>'
+        for t in tags
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -257,6 +273,49 @@ def build():
     }
     for lang in articles_by_lang:
         articles_by_lang[lang].sort(key=date_sort_key, reverse=True)
+
+    tags_by_lang = {
+        lang: sorted({t for a in articles_by_lang[lang] for t in a["tags"]},
+                     key=str.lower)
+        for lang in ("en", "zh-Hant")
+    }
+
+    def article_items(articles, c: dict, art_rel: str) -> list:
+        """<li> rows for an article list. art_rel = path to articles/ dir."""
+        items = []
+        for a in articles:
+            d = a["date"] or "—"
+            rows = [
+                "      <li>",
+                f'        <p class="meta">{c["articles_page"]["published"]} {d}</p>',
+                f'        <h2><a href="{art_rel}{a["slug"]}/index.html">{escape(a["title"])}</a></h2>',
+                f"        <p>{escape(a['description'])}</p>",
+            ]
+            if a["tags"]:
+                rows.append(
+                    f'        <p class="tags">{tag_links(a["tags"], art_rel)}</p>'
+                )
+            rows.append("      </li>")
+            items.append("\n".join(rows))
+        return items
+
+    def article_list_html(items, c: dict) -> str:
+        if items:
+            return '<ul class="article-list">\n' + "\n".join(items) + "\n    </ul>"
+        return f'<p class="section-intro">{c["articles_page"]["empty"]}</p>'
+
+    def tag_nav_html(lang: str, art_rel: str, current: str = "") -> str:
+        """Row of links to every tag archive (empty string if no tags)."""
+        if not tags_by_lang[lang]:
+            return ""
+        links = []
+        for t in tags_by_lang[lang]:
+            cur = ' aria-current="page"' if t == current else ""
+            links.append(
+                f'<a class="tag" href="{art_rel}tag/{tag_slug(t)}/index.html"'
+                f"{cur}>{escape(t)}</a>"
+            )
+        return f'<p class="tags tag-nav">{" ".join(links)}</p>'
 
     base_url = f"https://{site['domain']}/"
     articles_enabled = site.get("articles_enabled", True)
@@ -406,20 +465,9 @@ def build():
         other_list_canonical = base_url + ("zh-Hant/articles/" if lang == "en" else "articles/")
         common = common_values(c, art_list_depth, list_canonical, other_list_canonical)
 
-        items = []
-        for a in articles_by_lang[lang]:
-            d = a["date"] or "—"
-            items.append(
-                f'''      <li>
-        <p class="meta">{c["articles_page"]["published"]} {d}</p>
-        <h2><a href="../articles/{a['slug']}/index.html">{escape(a["title"])}</a></h2>
-        <p>{escape(a["description"])}</p>
-      </li>'''
-            )
-        if items:
-            list_html = f'<ul class="article-list">\n{chr(10).join(items)}\n    </ul>'
-        else:
-            list_html = f'<p class="section-intro">{c["articles_page"]["empty"]}</p>'
+        list_html = article_list_html(
+            article_items(articles_by_lang[lang], c, "../articles/"), c
+        )
 
         list_values = dict(common)
         list_values.update(nav_fragments(c, common))
@@ -427,10 +475,12 @@ def build():
             {
                 "TITLE": f'{c["articles_page"]["title"]} — xdo',
                 "DESCRIPTION": c["articles_page"]["intro"],
+                "BACK_URL": common["HOME_URL"],
                 "BACK_HOME": c["articles_page"]["back"],
                 "ARTICLES_LABEL": c["articles_page"]["label"],
                 "ARTICLES_TITLE": c["articles_page"]["title"],
                 "ARTICLES_INTRO": c["articles_page"]["intro"],
+                "TAG_NAV": tag_nav_html(lang, "../articles/"),
                 "ARTICLE_LIST": list_html,
                 "OTHER_PAGE_URL": other_page_url(lang, art_list_depth, "articles/index.html"),
             }
@@ -463,6 +513,11 @@ def build():
                     "DESCRIPTION": escape(a["description"]) or c["description"],
                     "ARTICLE_DATE": f'{c["articles_page"]["published"]} {a["date"]}',
                     "ARTICLE_TITLE": escape(a["title"]),
+                    "ARTICLE_TAGS": (
+                        f'<p class="tags">{tag_links(a["tags"], "../")}</p>'
+                        if a["tags"]
+                        else ""
+                    ),
                     "ARTICLE_BODY": a["body"],
                     "OTHER_PAGE_URL": other_page_url(lang, art_depth, other_target),
                 }
@@ -470,6 +525,49 @@ def build():
             write_page(
                 Path(lang_path) / "articles" / a["slug"] / "index.html",
                 render(templates["article"], art_values),
+            )
+
+        # --- tag archive pages ---------------------------------------------
+        for t in tags_by_lang[lang]:
+            tslug = tag_slug(t)
+            tag_depth = home_depth + 3
+            tag_canonical = base_url + (
+                f"articles/tag/{tslug}/"
+                if lang == "en"
+                else f"{lang}/articles/tag/{tslug}/"
+            )
+            other_tag_canonical = base_url + (
+                f"zh-Hant/articles/tag/{tslug}/" if lang == "en" else f"articles/tag/{tslug}/"
+            )
+            common = common_values(c, tag_depth, tag_canonical, other_tag_canonical)
+            tag_values = dict(common)
+            tag_values.update(nav_fragments(c, common))
+            other_slugs = {tag_slug(x) for x in tags_by_lang[c["other_lang_code"]]}
+            other_target = (
+                f"articles/tag/{tslug}/index.html"
+                if tslug in other_slugs
+                else "articles/index.html"
+            )
+            tagged = [a for a in articles_by_lang[lang] if t in a["tags"]]
+            tag_values.update(
+                {
+                    "TITLE": f'{escape(t)} — {c["articles_page"]["title"]} — xdo',
+                    "DESCRIPTION": c["articles_page"]["intro"],
+                    "BACK_URL": common["ARTICLES_URL"],
+                    "BACK_HOME": c["articles_page"]["label"],
+                    "ARTICLES_LABEL": c["articles_page"]["tag_label"],
+                    "ARTICLES_TITLE": escape(t),
+                    "ARTICLES_INTRO": c["articles_page"]["intro"],
+                    "TAG_NAV": tag_nav_html(lang, "../../", current=t),
+                    "ARTICLE_LIST": article_list_html(
+                        article_items(tagged, c, "../../"), c
+                    ),
+                    "OTHER_PAGE_URL": other_page_url(lang, tag_depth, other_target),
+                }
+            )
+            write_page(
+                Path(lang_path) / "articles" / "tag" / tslug / "index.html",
+                render(templates["article_list"], tag_values),
             )
 
     # --- shared static files -----------------------------------------------
@@ -480,6 +578,8 @@ def build():
         prefix = "" if lang == "en" else f"{lang}/"
         for a in articles_by_lang[lang]:
             sitemap_urls.append(f"{base_url}{prefix}articles/{a['slug']}/")
+        for t in tags_by_lang[lang]:
+            sitemap_urls.append(f"{base_url}{prefix}articles/tag/{tag_slug(t)}/")
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for url in sitemap_urls:

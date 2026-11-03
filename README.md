@@ -103,7 +103,7 @@ top of `content.json`:
   project untouched.
 - `true` — everything comes back on the next build.
 
-Set the flag, rebuild, done. It is currently set to `false` (hidden).
+Set the flag, rebuild, done. It is currently set to `true` (shown).
 
 ## Writing articles
 
@@ -114,6 +114,7 @@ Articles are Markdown files with a small front-matter header:
 title: "Your article title"
 description: "One-sentence summary shown on the article index."
 date: 2026-10-15
+tags: mobile, pentest
 draft: true
 ---
 
@@ -124,6 +125,11 @@ Body text...
 
 - `draft: true` keeps the article off the website. Set `draft: false`
   (or delete the line) and rebuild to publish.
+- `tags:` is an optional comma-separated list. Tags appear on the
+  article, on the index, and each tag gets its own archive page at
+  `articles/tag/<tag>/` (linked from the tag row on the index). Keep
+  tags lowercase, short and few (1–3 per article); use the same
+  (English) tags in both languages so the archives stay consistent.
 - Supported Markdown: `##`/`###` headings, paragraphs, bullet and
   numbered lists, **bold**, *italic*, `code`, fenced code blocks,
   links, and `> quotes`.

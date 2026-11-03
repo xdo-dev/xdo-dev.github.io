@@ -2,6 +2,7 @@
 title: "Example draft article — delete or edit me"
 description: "A draft showing the article format. It will not appear on the website until you remove the draft flag."
 date: 2026-10-15
+tags: mobile, pentest
 draft: true
 ---
 

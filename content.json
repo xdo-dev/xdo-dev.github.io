@@ -5,7 +5,7 @@
     "brand": "xdo",
     "github": "https://github.com/xdo-dev",
     "email": "enquiry@xdo.dev",
-    "articles_enabled": false
+    "articles_enabled": true
   },
   "en": {
     "lang_code": "en",
@@ -133,7 +133,8 @@
       "empty": "No articles published yet. Drafts live in the articles/ folder and appear here once published.",
       "back": "Back to home",
       "read": "Read article",
-      "published": "Published"
+      "published": "Published",
+      "tag_label": "Tag"
     },
     "footer": {
       "tagline": "Built to ship. Tested to withstand.",
@@ -267,7 +268,8 @@
       "empty": "尚未發佈文章。草稿存放於 articles/ 資料夾，發佈後即會顯示。",
       "back": "返回主頁",
       "read": "閱讀文章",
-      "published": "發佈於"
+      "published": "發佈於",
+      "tag_label": "標籤"
     },
     "footer": {
       "tagline": "為上線而生，經得起考驗。",

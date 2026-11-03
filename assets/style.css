@@ -486,6 +486,51 @@ img {
   color: var(--muted);
 }
 
+/* article tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.article-list .tags {
+  margin-top: 0.6rem;
+}
+
+.article .tags {
+  margin: 0.9rem 0 2rem;
+}
+
+.tag-nav {
+  margin: 0 0 2rem;
+}
+
+.tag {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Courier New",
+    monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 0.25rem;
+  padding: 0.15rem 0.55rem;
+  text-decoration: none;
+}
+
+.tag:hover {
+  color: var(--fg);
+  border-color: var(--fg);
+  text-decoration: none;
+}
+
+.tag[aria-current="page"] {
+  color: var(--fg);
+  border-color: var(--fg);
+}
+
 /* article body */
 .article {
   padding-bottom: 4rem;
