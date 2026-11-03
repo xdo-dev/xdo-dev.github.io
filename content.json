@@ -149,7 +149,7 @@
     "other_lang_label": "EN",
     "html_lang": "zh-Hant",
     "title": "xdo — 流動及網頁應用程式資安服務",
-    "description": "xdo 為企業提供流動及網頁應用程式的滲透測試與程式碼審計服務。團隊具備開發及漏洞賞金背景。",
+    "description": "XDO 為企業提供流動及網頁應用程式的滲透測試與程式碼審計服務。團隊具備開發及漏洞賞金背景。",
     "nav": [
       {
         "id": "services",
@@ -178,10 +178,10 @@
     "hero": {
       "eyebrow": "資訊安全服務",
       "title_lines": [
-        "為上線而生。",
-        "經得起考驗。"
+        "",
+        ""
       ],
-      "lead": "xdo 是一支源自開發與漏洞賞金的資安團隊。我們為亞太區企業測試流動及網頁應用程式，並清楚記錄我們發現的一切。",
+      "lead": "XDO 是一支源自開發與漏洞賞金的資安團隊。我們為亞太區企業測試流動及應用程式，並清楚記錄我們發現的一切。",
       "cta_primary": "聯絡我們",
       "cta_secondary": "閱讀技術文章"
     },
@@ -239,7 +239,7 @@
     "about": {
       "label": "03 — 關於",
       "title": "先是開發者，再做測試者。",
-      "body": "xdo 出身於開發與漏洞賞金計畫，而非照本宣科的檢核表。這個背景塑造了我們的測試方式：我們讀您的程式碼、理解您的架構，再以熟練攻擊者的角度發動測試。",
+      "body": "XDO 出身於開發與漏洞賞金計畫，而非照本宣科的檢核表。這個背景塑造了我們的測試方式：我們讀您的程式碼、理解您的架構，再以熟練攻擊者的角度發動測試。",
       "credentials_title": "團隊認證",
       "credentials": [
         "OSCP",
@@ -249,7 +249,7 @@
         "Mobile Hacking Lab - Android Exploit Developer"
       ],
       "region_title": "服務地區",
-      "region": "服務香港、新加坡及亞太區企業。"
+      "region": "亞太區企業。"
     },
     "contact": {
       "label": "04 — 聯絡",
@@ -257,14 +257,14 @@
       "desc": "電郵我們以預約諮詢或討論專案。",
       "email_label": "電郵",
       "github_label": "GitHub",
-      "office_label": "辦公地點",
-      "office_value": "[辦公地點 — 待提供]",
+      "office_label": "",
+      "office_value": "",
       "cta": "聯絡我們"
     },
     "articles_page": {
       "label": "文章",
       "title": "技術文章",
-      "intro": "來自我們測試與開發工作的筆記，絕無廢話。",
+      "intro": "來自我們測試與開發工作的筆記。",
       "empty": "尚未發佈文章。草稿存放於 articles/ 資料夾，發佈後即會顯示。",
       "back": "返回主頁",
       "read": "閱讀文章",
@@ -272,9 +272,9 @@
       "tag_label": "標籤"
     },
     "footer": {
-      "tagline": "為上線而生，經得起考驗。",
+      "tagline": "",
       "rights": "版權所有。",
-      "office_placeholder": "[辦公地點 — 待提供]"
+      "office_placeholder": ""
     }
   }
 }
