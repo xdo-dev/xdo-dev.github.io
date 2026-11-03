@@ -1,0 +1,55 @@
+This repository contains three kinds of material, under three terms.
+
+1. Source code — MIT License
+   Applies to: scripts/, templates/, assets/style.css, assets/main.js
+
+2. Articles — Creative Commons Attribution 4.0 International (CC BY 4.0)
+   Applies to: articles/
+
+3. Brand assets and site copy — all rights reserved
+   Applies to: assets/brand/, assets/logo-*.png, assets/favicon*.png,
+   content.json, and the xdo.dev name and logo
+
+
+1. Source code — MIT License
+----------------------------------------------------------------------
+
+Copyright (c) 2026 xdo.dev
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+2. Articles — CC BY 4.0
+----------------------------------------------------------------------
+
+The technical articles in articles/ are licensed under the Creative Commons
+Attribution 4.0 International License:
+https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt them, including for commercial purposes,
+provided you give appropriate credit to xdo.dev, link to the original article
+at https://xdo.dev, and indicate if changes were made.
+
+
+3. Brand assets and site copy — all rights reserved
+----------------------------------------------------------------------
+
+The xdo.dev name and logo, the files in assets/brand/, the logo and favicon
+images, and the company copy in content.json may not be reused without
+written permission. Contact: enquiry@xdo.dev

@@ -240,3 +240,13 @@ language's article index.
 
 **Changes not visible.** Hard-refresh (Ctrl+F5) — the browser may cache
 `style.css` or `main.js`.
+
+## License
+
+Split license — see [LICENSE](LICENSE) for the full text:
+
+- Source code (`scripts/`, `templates/`, `assets/style.css`,
+  `assets/main.js`): MIT
+- Articles (`articles/`): CC BY 4.0, attribution to xdo
+- Brand assets and site copy (logos, favicons, `assets/brand/`,
+  `content.json`): all rights reserved
