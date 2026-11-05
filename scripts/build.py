@@ -395,15 +395,27 @@ def build():
                 nav_links.append(f'<a href="{common["HOME_URL"]}#{item["id"]}">{item["label"]}</a>')
         service_cards = []
         for s in c["services"]["items"]:
-            service_cards.append(
-                f'''      <div class="card">
-        <p class="card-tag">{s["tag"]}</p>
-        <h3>{s["name"]}</h3>
-        <p>{s["desc"]}</p>
-        <p class="who">{s["who"]}</p>
-        <div class="benefit"><strong>{s["benefit_title"]}</strong>{s["benefit"]}</div>
-      </div>'''
+            soon = s.get("coming_soon")
+            card_class = "card card-soon" if soon else "card"
+            badge = (
+                f' <span class="card-badge">{c["services"]["coming_soon_label"]}</span>'
+                if soon
+                else ""
             )
+            rows = [
+                f'      <div class="{card_class}">',
+                f'        <p class="card-tag">{s["tag"]}</p>',
+                f'        <h3>{s["name"]}{badge}</h3>',
+                f'        <p>{s["desc"]}</p>',
+            ]
+            if s.get("who"):
+                rows.append(f'        <p class="who">{s["who"]}</p>')
+            if s.get("benefit"):
+                rows.append(
+                    f'        <div class="benefit"><strong>{s["benefit_title"]}</strong>{s["benefit"]}</div>'
+                )
+            rows.append("      </div>")
+            service_cards.append("\n".join(rows))
         steps = []
         for s in c["approach"]["steps"]:
             steps.append(

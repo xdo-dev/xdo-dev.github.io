@@ -53,23 +53,28 @@
     "services": {
       "label": "01 — Services",
       "title": "What we do",
-      "intro": "Two focused services, mobile and web. No checklists-for-hire — every engagement is scoped and tested by people who build software and break software.",
+      "intro": "One focused service, mobile and web. No checklists-for-hire — every engagement is scoped and tested by people who build software and break software.",
+      "coming_soon_label": "Coming soon",
       "items": [
         {
-          "name": "Penetration Testing",
+          "name": "Penetration Testing & Code Audit",
           "tag": "Mobile & Web",
-          "desc": "Manual-first, attacker-perspective testing of your mobile and web applications. We chain findings the way real adversaries do, then rank every issue by business risk.",
-          "who": "For enterprises that need to know how their applications really hold up.",
+          "desc": "Manual-first, attacker-perspective testing and source-level review of your mobile and web applications. We chain findings the way real adversaries do, read the code behind them, and rank every issue by business risk.",
+          "who": "For enterprises that need to know how their applications really hold up — before and after deployment.",
           "benefit_title": "What you get",
-          "benefit": "A findings report ranked by risk, with remediation guidance your developers can act on."
+          "benefit": "A findings report ranked by risk, with remediation guidance your developers can act on, plus assessment documentation covering the agreed scope and work performed."
         },
         {
-          "name": "Code Audit",
-          "tag": "Mobile & Web",
-          "desc": "Source-level review of your mobile and web applications, from a developer and bug-bounty perspective. We read the code, not just the output.",
-          "who": "For enterprises that want issues found before deployment, not after.",
-          "benefit_title": "What you get",
-          "benefit": "Assessment documentation covering the agreed scope, the work performed, and every finding."
+          "name": "Detection Testing",
+          "tag": "SOC & EDR",
+          "desc": "Controlled attack scenarios run against your environment to verify that your detections actually fire — and that your SOC sees what it should.",
+          "coming_soon": true
+        },
+        {
+          "name": "Kubernetes Security Review",
+          "tag": "Cloud Native",
+          "desc": "Configuration and architecture review of your Kubernetes clusters: RBAC, network policies, workload hardening and supply-chain exposure.",
+          "coming_soon": true
         }
       ],
       "note_title": "About assessment documentation",
@@ -188,23 +193,28 @@
     "services": {
       "label": "01 — 服務",
       "title": "我們做什麼",
-      "intro": "兩項核心服務，涵蓋流動及網頁應用程式。我們不只跑清單——每個項目都由寫過程式也破過程式的人來規劃與測試。",
+      "intro": "一項核心服務，涵蓋流動及網頁應用程式。我們不只跑清單——每個項目都由寫過程式也破過程式的人來規劃與測試。",
+      "coming_soon_label": "即將推出",
       "items": [
         {
-          "name": "滲透測試",
+          "name": "滲透測試與程式碼審計",
           "tag": "流動及網頁",
-          "desc": "以攻擊者視角、以手動為主的流動及網頁應用程式測試。我們像真正的對手一樣串聯漏洞，並按業務風險排列所有發現。",
-          "who": "適合需要確切了解應用程式防禦能力的企業。",
+          "desc": "以攻擊者視角、以手動為主，對流動及網頁應用程式進行測試，並作程式碼層級的審查。我們像真正的對手一樣串聯漏洞、讀懂漏洞背後的程式碼，並按業務風險排列所有發現。",
+          "who": "適合需要在部署前後都確切了解應用程式防禦能力的企業。",
           "benefit_title": "您會得到",
-          "benefit": "一份按風險排序的報告，附上開發團隊可直接跟進的修復建議。"
+          "benefit": "一份按風險排序、附開發團隊可直接跟進修復建議的報告，以及涵蓋議定範圍與執行工作的評估文件。"
         },
         {
-          "name": "程式碼審計",
-          "tag": "流動及網頁",
-          "desc": "以開發者與漏洞賞金視角，對流動及網頁應用程式進行程式碼層級的審查。我們讀的是程式碼，不只是輸出結果。",
-          "who": "適合想在部署前（而非部署後）發現問題的企業。",
-          "benefit_title": "您會得到",
-          "benefit": "涵蓋議定範圍、執行工作與所有發現的評估文件。"
+          "name": "偵測測試",
+          "tag": "SOC 與 EDR",
+          "desc": "在您的環境中執行受控攻擊情境，驗證偵測規則是否真的觸發，以及 SOC 是否看得見應該看見的攻擊。",
+          "coming_soon": true
+        },
+        {
+          "name": "Kubernetes 安全審查",
+          "tag": "雲端原生",
+          "desc": "審查 Kubernetes 叢集的設定與架構：RBAC、網絡政策、工作負載強化與供應鏈風險。",
+          "coming_soon": true
         }
       ],
       "note_title": "關於評估文件",
